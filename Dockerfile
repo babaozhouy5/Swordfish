@@ -1,12 +1,12 @@
-FROM dockerfile/ubuntu
+FROM java:7
 # 签名
 MAINTAINER babaozhouy5 "nwglbbz@gmail.com"
 
 # 安装JDK与nginx
-RUN apt-get update
-RUN apt-get install openjdk-7-jre -y
-RUN apt-get install openjdk-7-jdk -y
-RUN apt-get install nginx -y
+#RUN apt-get update
+#RUN apt-get install openjdk-7-jre -y
+#RUN apt-get install openjdk-7-jdk -y
+#RUN apt-get install nginx -y
 
 #拷贝nginx配置文件
 ADD ./etc/nginx-conf /etc/nginx/conf.d
