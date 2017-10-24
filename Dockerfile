@@ -1,6 +1,6 @@
-FROM ubuntu
+FROM ubuntu:16.04
 # 签名
-MAINTAINER saymagic "saymagic@163.com"
+MAINTAINER babaozhouy5 "nwglbbz@gmail.com"
 
 # 安装JDK与nginx
 RUN apt-get update
