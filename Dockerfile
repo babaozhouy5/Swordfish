@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM dockerfile/ubuntu
 # 签名
 MAINTAINER babaozhouy5 "nwglbbz@gmail.com"
 
