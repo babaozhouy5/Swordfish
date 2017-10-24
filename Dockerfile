@@ -1,12 +1,20 @@
-FROM java:7
+FROM ubuntu:16.04
 # 签名
 MAINTAINER babaozhouy5 "nwglbbz@gmail.com"
 
 # 安装JDK与nginx
-#RUN apt-get update
-#RUN apt-get install openjdk-7-jre -y
-#RUN apt-get install openjdk-7-jdk -y
-#RUN apt-get install nginx -y
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get dist-upgrade -y
+RUN apt-get install software-properties-common -y
+
+RUN add-apt-repository ppa:openjdk-r/ppa -y
+RUN apt-get update
+RUN apt-get install openjdk-7-jre -y
+RUN apt-get install openjdk-7-jdk -y
+RUN apt-get install nginx -y
 
 #拷贝nginx配置文件
 ADD ./etc/nginx-conf /etc/nginx/conf.d
